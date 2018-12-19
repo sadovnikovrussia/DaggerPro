@@ -7,6 +7,8 @@ import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import dev.sadovnikov.daggerpro.interfaces.ApplicationContext;
@@ -16,6 +18,7 @@ import okhttp3.OkHttpClient;
 @Module(includes = {OkHttpClientModule.class, ContextModule.class})
 public class PicassoModule {
     private static final String TAG = "PicassoModule";
+
 
     @RandomUserApplicationScope
     @Provides

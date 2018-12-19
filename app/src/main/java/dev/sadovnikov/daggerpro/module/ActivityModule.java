@@ -17,8 +17,8 @@ public class ActivityModule {
         this.context = context;
     }
 
-    @Named("activity_context")
-    @RandomUserApplicationScope
+    //@Named("activity_context")
+    //@RandomUserApplicationScope
     @Provides
     Context context(){
         return context;

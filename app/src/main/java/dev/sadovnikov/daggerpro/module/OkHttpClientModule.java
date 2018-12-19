@@ -23,6 +23,7 @@ public class OkHttpClientModule {
         return build;
     }
 
+
     @Provides
     HttpLoggingInterceptor httpLoggingInterceptor() {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
@@ -35,4 +36,5 @@ public class OkHttpClientModule {
         Log.d(TAG, "httpLoggingInterceptor: " + httpLoggingInterceptor.toString());
         return httpLoggingInterceptor;
     }
+
 }

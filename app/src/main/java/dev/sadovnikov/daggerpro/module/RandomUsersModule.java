@@ -2,6 +2,8 @@ package dev.sadovnikov.daggerpro.module;
 
 import android.util.Log;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import dev.sadovnikov.daggerpro.interfaces.RandomUserApplicationScope;
@@ -15,7 +17,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RandomUsersModule {
     private static final String TAG = "RandomUsersModule";
 
-    @RandomUserApplicationScope
+    //@Singleton
+    //@RandomUserApplicationScope
     @Provides
     RandomUsersApi randomUsersApi(Retrofit retrofit) {
         RandomUsersApi randomUsersApi = retrofit.create(RandomUsersApi.class);
@@ -35,7 +38,7 @@ public class RandomUsersModule {
         return build;
     }
 
-    @RandomUserApplicationScope
+    //@RandomUserApplicationScope
     @Provides
     GsonConverterFactory gsonConverterFactory() {
         GsonConverterFactory gsonConverterFactory = GsonConverterFactory.create();

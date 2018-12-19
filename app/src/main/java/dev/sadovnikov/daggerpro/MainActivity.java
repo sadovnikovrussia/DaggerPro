@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         randomUsersComponent = DaggerRandomUsersComponent.builder()
                 .contextModule(new ContextModule(this))
                 .build();
+        Log.d(TAG, "onCreate: " + randomUsersComponent.toString());
         initViews();
         Timber.plant(new Timber.DebugTree());
         populateUsers();
