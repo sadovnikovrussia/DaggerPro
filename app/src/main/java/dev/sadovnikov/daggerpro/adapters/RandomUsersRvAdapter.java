@@ -22,8 +22,8 @@ import dev.sadovnikov.daggerpro.model.Result;
 public class RandomUsersRvAdapter extends RecyclerView.Adapter<RandomUsersRvAdapter.RandomUsersViewHolder> {
     private List<Result> resultList = new ArrayList<>();
 
-    Context context;
-    Picasso picasso;
+    private Context context;
+    private Picasso picasso;
 
     public RandomUsersRvAdapter(Context context, Picasso picasso) {
         this.context = context;
